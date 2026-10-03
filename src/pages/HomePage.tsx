@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import {
   Hero,
   Features,
@@ -14,7 +14,7 @@ interface HomePageProps {
   onNavigate: (tab: string) => void;
 }
 
-export const HomePage: React.FC<HomePageProps> = ({
+export const HomePage: FC<HomePageProps> = ({
   onOpenBooking,
   onSelectService,
   onNavigate,

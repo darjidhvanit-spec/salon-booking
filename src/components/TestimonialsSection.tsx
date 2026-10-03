@@ -1,8 +1,8 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Star, Quote } from 'lucide-react';
 import { useReviews } from '../services/api';
 
-export const TestimonialsSection: React.FC = () => {
+export const TestimonialsSection: FC = () => {
   const { data: reviews } = useReviews();
 
   return (

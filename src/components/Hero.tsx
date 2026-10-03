@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import type { FC } from 'react';
 import {
   ArrowRight,
   Star,
@@ -73,7 +74,7 @@ const HERO_SLIDES: HeroSlide[] = [
   },
 ];
 
-export const Hero: React.FC<HeroProps> = ({ onBookClick, onViewServices }) => {
+export const Hero: FC<HeroProps> = ({ onBookClick, onViewServices }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);

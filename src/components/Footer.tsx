@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FC, FormEvent } from 'react';
 import {
   Send,
   MapPin,
@@ -80,11 +81,11 @@ interface FooterProps {
   onOpenBooking?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => {
+export const Footer: FC<FooterProps> = ({ onNavigate, onOpenBooking }) => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = (e: FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
       setSubscribed(true);

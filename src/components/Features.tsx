@@ -1,9 +1,9 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Calendar, ShieldCheck, Sparkles } from 'lucide-react';
 import { FEATURES } from '../data/mockData';
 
 // Custom Chair Icon for Barber Shop
-const BarberChairIcon: React.FC<{ className?: string }> = ({ className }) => (
+const BarberChairIcon: FC<{ className?: string }> = ({ className }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -23,7 +23,7 @@ const BarberChairIcon: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 // Custom Straight Razor Icon
-const StraightRazorIcon: React.FC<{ className?: string }> = ({ className }) => (
+const StraightRazorIcon: FC<{ className?: string }> = ({ className }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -39,7 +39,7 @@ const StraightRazorIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-export const Features: React.FC = () => {
+export const Features: FC = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'chair':

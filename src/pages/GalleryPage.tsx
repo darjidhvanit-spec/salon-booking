@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FC } from 'react';
 
 const GALLERY_ITEMS = [
   {
@@ -45,7 +46,7 @@ const GALLERY_ITEMS = [
   },
 ];
 
-export const GalleryPage: React.FC = () => {
+export const GalleryPage: FC = () => {
   const [filter, setFilter] = useState<string>('all');
 
   const filteredItems = GALLERY_ITEMS.filter((item) =>

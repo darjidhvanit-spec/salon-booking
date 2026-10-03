@@ -1,11 +1,11 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 
 interface PromoBannerProps {
   onBookClick?: () => void;
 }
 
-export const PromoBanner: React.FC<PromoBannerProps> = ({ onBookClick }) => {
+export const PromoBanner: FC<PromoBannerProps> = ({ onBookClick }) => {
   return (
     <section className="bg-[#faf8f5] pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

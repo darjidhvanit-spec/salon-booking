@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
+import type { FC } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { useServices } from '../services/api';
 import type { Service } from '../types';
@@ -8,7 +9,7 @@ interface ServicesSectionProps {
   onViewAll?: () => void;
 }
 
-export const ServicesSection: React.FC<ServicesSectionProps> = ({
+export const ServicesSection: FC<ServicesSectionProps> = ({
   onSelectService,
   onViewAll,
 }) => {

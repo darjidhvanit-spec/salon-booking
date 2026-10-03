@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FC } from 'react';
 import { useServices } from '../services/api';
 import type { Service } from '../types';
 import { Sparkles, Clock, ArrowRight } from 'lucide-react';
@@ -8,7 +9,7 @@ interface ServicesPageProps {
   onOpenBooking: () => void;
 }
 
-export const ServicesPage: React.FC<ServicesPageProps> = ({
+export const ServicesPage: FC<ServicesPageProps> = ({
   onSelectService,
   onOpenBooking,
 }) => {

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import type { FC, FormEvent } from 'react';
 import {
   X,
   Scissors,
@@ -17,7 +18,7 @@ interface BookingModalProps {
   preSelectedService?: Service | null;
 }
 
-export const BookingModal: React.FC<BookingModalProps> = ({
+export const BookingModal: FC<BookingModalProps> = ({
   isOpen,
   onClose,
   preSelectedService,
@@ -62,7 +63,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!selectedService || !selectedBarber || !selectedDate || !selectedTime) return;
 

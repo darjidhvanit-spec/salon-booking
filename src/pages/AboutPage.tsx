@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import { useBarbers } from '../services/api';
 import { ArrowRight } from 'lucide-react';
 
@@ -6,7 +6,7 @@ interface AboutPageProps {
   onOpenBooking: () => void;
 }
 
-export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
+export const AboutPage: FC<AboutPageProps> = ({ onOpenBooking }) => {
   const { data: barbers } = useBarbers();
 
   return (

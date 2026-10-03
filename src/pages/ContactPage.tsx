@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FC, FormEvent } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 
-export const ContactPage: React.FC = () => {
+export const ContactPage: FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,7 +11,7 @@ export const ContactPage: React.FC = () => {
   });
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setSent(true);
     setTimeout(() => {

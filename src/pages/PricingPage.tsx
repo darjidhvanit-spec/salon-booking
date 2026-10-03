@@ -1,11 +1,11 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Check, Sparkles, ArrowRight } from 'lucide-react';
 
 interface PricingPageProps {
   onOpenBooking: () => void;
 }
 
-export const PricingPage: React.FC<PricingPageProps> = ({ onOpenBooking }) => {
+export const PricingPage: FC<PricingPageProps> = ({ onOpenBooking }) => {
   const membershipPlans = [
     {
       name: 'Silver Club',

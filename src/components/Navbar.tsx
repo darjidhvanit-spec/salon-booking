@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FC } from 'react';
 import { Menu, X, Scissors, Calendar } from 'lucide-react';
 
 interface NavbarProps {
@@ -7,7 +8,7 @@ interface NavbarProps {
   onOpenBooking?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({
+export const Navbar: FC<NavbarProps> = ({
   activeTab = 'home',
   onNavigate,
   onOpenBooking,

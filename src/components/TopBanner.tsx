@@ -1,11 +1,11 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Scissors } from 'lucide-react';
 
 interface TopBannerProps {
   onBookClick?: () => void;
 }
 
-export const TopBanner: React.FC<TopBannerProps> = ({ onBookClick }) => {
+export const TopBanner: FC<TopBannerProps> = ({ onBookClick }) => {
   return (
     <div className="bg-[#121212] text-white py-2 px-4 text-xs sm:text-sm font-medium tracking-wider flex items-center justify-center gap-2 border-b border-stone-800">
       <Scissors className="w-3.5 h-3.5 text-[#c59b27] -rotate-45" />
